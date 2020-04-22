@@ -10,6 +10,9 @@ class NewPost extends Component {
     author: "Dave",
   };
 
+  componentDidMount() {
+    console.log(this.props);
+  }
   postDataHandler = () => {
     const data = {
       title: this.state.title,
@@ -42,6 +45,7 @@ class NewPost extends Component {
           value={this.state.author}
           onChange={(event) => this.setState({ author: event.target.value })}
         >
+          <option value="David">David</option>
           <option value="Max">Max</option>
           <option value="Manu">Manu</option>
         </select>
